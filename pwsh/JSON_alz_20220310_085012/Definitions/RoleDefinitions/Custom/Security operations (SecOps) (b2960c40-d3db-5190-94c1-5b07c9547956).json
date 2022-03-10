@@ -1,0 +1,31 @@
+{
+  "roleName": "Security operations (SecOps)",
+  "type": "CustomRole",
+  "description": "Security administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy",
+  "assignableScopes": [
+    "/providers/Microsoft.Management/managementGroups/alz"
+  ],
+  "permissions": [
+    {
+      "actions": [
+        "*/read",
+        "*/register/action",
+        "Microsoft.KeyVault/locations/deletedVaults/purge/action",
+        "Microsoft.PolicyInsights/*",
+        "Microsoft.Authorization/policyAssignments/*",
+        "Microsoft.Authorization/policyDefinitions/*",
+        "Microsoft.Authorization/policyExemptions/*",
+        "Microsoft.Authorization/policySetDefinitions/*",
+        "Microsoft.Insights/alertRules/*",
+        "Microsoft.Resources/deployments/*",
+        "Microsoft.Security/*",
+        "Microsoft.Support/*"
+      ],
+      "notActions": []
+    }
+  ],
+  "createdOn": "2022-03-10T10:50:42.9757956Z",
+  "updatedOn": "2022-03-10T12:43:46.1519323Z",
+  "createdBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+  "updatedBy": "07390265-aba8-4f54-8a36-db57e2c11574"
+}

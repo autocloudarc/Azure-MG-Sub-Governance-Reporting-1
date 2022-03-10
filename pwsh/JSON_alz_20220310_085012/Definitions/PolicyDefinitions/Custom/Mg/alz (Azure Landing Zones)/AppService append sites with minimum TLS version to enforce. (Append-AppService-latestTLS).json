@@ -1,0 +1,64 @@
+{
+  "displayName": "AppService append sites with minimum TLS version to enforce.",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "Append the AppService sites object to ensure that min Tls version is set to required minimum TLS version. Please note Append does not enforce compliance use then deny.",
+  "metadata": {
+    "version": "1.0.0",
+    "category": "App Service",
+    "createdBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "createdOn": "2022-03-10T10:49:57.7870406Z",
+    "updatedBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "updatedOn": "2022-03-10T12:43:03.376495Z"
+  },
+  "parameters": {
+    "effect": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Append",
+        "Disabled"
+      ],
+      "defaultValue": "Append"
+    },
+    "minTlsVersion": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Select version minimum TLS Web App config",
+        "description": "Select version  minimum TLS version for a  Web App config to enforce"
+      },
+      "allowedValues": [
+        "1.2",
+        "1.0",
+        "1.1"
+      ],
+      "defaultValue": "1.2"
+    }
+  },
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Web/sites/config"
+        },
+        {
+          "field": "Microsoft.Web/sites/config/minTlsVersion",
+          "notEquals": "[parameters('minTlsVersion')]"
+        }
+      ]
+    },
+    "then": {
+      "effect": "[parameters('effect')]",
+      "details": [
+        {
+          "field": "Microsoft.Web/sites/config/minTlsVersion",
+          "value": "[parameters('minTlsVersion')]"
+        }
+      ]
+    }
+  }
+}

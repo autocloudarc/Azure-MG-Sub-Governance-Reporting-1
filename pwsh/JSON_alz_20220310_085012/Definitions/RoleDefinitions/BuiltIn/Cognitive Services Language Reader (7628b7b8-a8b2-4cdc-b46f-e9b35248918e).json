@@ -1,0 +1,28 @@
+{
+  "roleName": "Cognitive Services Language Reader",
+  "type": "BuiltInRole",
+  "description": "Has access to Read and Test functions under Language portal",
+  "assignableScopes": [
+    "/"
+  ],
+  "permissions": [
+    {
+      "actions": [
+        "Microsoft.CognitiveServices/*/read",
+        "Microsoft.Authorization/roleAssignments/read",
+        "Microsoft.Authorization/roleDefinitions/read"
+      ],
+      "notActions": [],
+      "dataActions": [
+        "Microsoft.CognitiveServices/accounts/LanguageAuthoring/*/read",
+        "Microsoft.CognitiveServices/accounts/ConversationalLanguageUnderstanding/*/read",
+        "Microsoft.CognitiveServices/accounts/ConversationalLanguageUnderstanding/projects/export/action"
+      ],
+      "notDataActions": []
+    }
+  ],
+  "createdOn": "2021-11-04T03:29:14.7643336Z",
+  "updatedOn": "2021-11-11T20:15:25.6734383Z",
+  "createdBy": null,
+  "updatedBy": null
+}

@@ -1,0 +1,10 @@
+{
+  "RoleAssignmentId": "/providers/microsoft.authorization/roleassignments/890aafc2-324a-4f6a-a40a-3fb501e8a0de",
+  "Scope": "/",
+  "DisplayName": "azr-dev-0072-aaa-01",
+  "SignInName": null,
+  "RoleDefinitionName": "Contributor",
+  "RoleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+  "ObjectId": "c1a110d4-e5cb-42f4-bad5-8f74cac58673",
+  "ObjectType": "ServicePrincipal"
+}

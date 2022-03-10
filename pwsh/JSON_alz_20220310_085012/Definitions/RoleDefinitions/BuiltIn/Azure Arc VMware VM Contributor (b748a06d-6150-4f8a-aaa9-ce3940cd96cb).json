@@ -1,0 +1,47 @@
+{
+  "roleName": "Azure Arc VMware VM Contributor",
+  "type": "BuiltInRole",
+  "description": "Arc VMware VM Contributor has permissions to perform all VM actions.",
+  "assignableScopes": [
+    "/"
+  ],
+  "permissions": [
+    {
+      "actions": [
+        "Microsoft.ConnectedVMwarevSphere/virtualmachines/*",
+        "Microsoft.Insights/AlertRules/Write",
+        "Microsoft.Insights/AlertRules/Delete",
+        "Microsoft.Insights/AlertRules/Read",
+        "Microsoft.Insights/AlertRules/Activated/Action",
+        "Microsoft.Insights/AlertRules/Resolved/Action",
+        "Microsoft.Insights/AlertRules/Throttled/Action",
+        "Microsoft.Insights/AlertRules/Incidents/Read",
+        "Microsoft.Resources/deployments/read",
+        "Microsoft.Resources/deployments/write",
+        "Microsoft.Resources/deployments/delete",
+        "Microsoft.Resources/deployments/cancel/action",
+        "Microsoft.Resources/deployments/validate/action",
+        "Microsoft.Resources/deployments/whatIf/action",
+        "Microsoft.Resources/deployments/exportTemplate/action",
+        "Microsoft.Resources/deployments/operations/read",
+        "Microsoft.Resources/deployments/operationstatuses/read",
+        "Microsoft.Resources/subscriptions/resourcegroups/deployments/read",
+        "Microsoft.Resources/subscriptions/resourcegroups/deployments/write",
+        "Microsoft.Resources/subscriptions/resourcegroups/deployments/operations/read",
+        "Microsoft.Resources/subscriptions/resourcegroups/deployments/operationstatuses/read",
+        "Microsoft.ResourceHealth/availabilityStatuses/read",
+        "Microsoft.Authorization/*/read",
+        "Microsoft.Resources/subscriptions/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Resources/subscriptions/operationresults/read"
+      ],
+      "notActions": [],
+      "dataActions": [],
+      "notDataActions": []
+    }
+  ],
+  "createdOn": "2021-10-18T20:19:53.0087024Z",
+  "updatedOn": "2021-11-11T20:15:23.870602Z",
+  "createdBy": null,
+  "updatedBy": null
+}

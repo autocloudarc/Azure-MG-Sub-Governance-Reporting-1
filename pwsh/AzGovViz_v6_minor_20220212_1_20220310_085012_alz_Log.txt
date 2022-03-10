@@ -1,0 +1,409 @@
+**********************
+PowerShell transcript start
+Start time: 20220310085012
+Username: NORTHAMERICA\prestopa
+RunAs User: NORTHAMERICA\prestopa
+Configuration Name: 
+Machine: DESKTOP-9I796BB (Microsoft Windows NT 10.0.22000.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 29660
+PSVersion: 7.2.1
+PSEdition: Core
+GitCommitId: 7.2.1
+OS: Microsoft Windows 10.0.22000
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.1
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\data-msf\source\repos\git\Azure-MG-Sub-Governance-Reporting-1\pwsh\AzGovViz_v6_minor_20220212_1_20220310_085012_alz_Log.txt
+Start AzGovViz 10-Mar-2022 08:50:12 (#v6_minor_20220212_1)
+CheckCodeRunPlatform: running in Console
+AzAPICall debug disabled
+Environment: AzureCloud
+Checking powershell edition and version
+ PS check passed : (Major[7]; Minor[2] gt 0); (minimum supported version '7.0.3')
+ PS Edition: Core
+ PS Version: 7.2.1
+Testing required Az modules cmdlets
+ AzModule test passed: Az ps module supporting cmdlet Get-AzContext installed
+Collecting Az modules versions
+VERBOSE: Exporting cmdlet 'Find-Package'.
+VERBOSE: Exporting cmdlet 'Find-PackageProvider'.
+VERBOSE: Exporting cmdlet 'Get-Package'.
+VERBOSE: Exporting cmdlet 'Get-PackageProvider'.
+VERBOSE: Exporting cmdlet 'Get-PackageSource'.
+VERBOSE: Exporting cmdlet 'Import-PackageProvider'.
+VERBOSE: Exporting cmdlet 'Install-Package'.
+VERBOSE: Exporting cmdlet 'Install-PackageProvider'.
+VERBOSE: Exporting cmdlet 'Register-PackageSource'.
+VERBOSE: Exporting cmdlet 'Save-Package'.
+VERBOSE: Exporting cmdlet 'Set-PackageSource'.
+VERBOSE: Exporting cmdlet 'Uninstall-Package'.
+VERBOSE: Exporting cmdlet 'Unregister-PackageSource'.
+VERBOSE: Importing cmdlet 'Find-Package'.
+VERBOSE: Importing cmdlet 'Find-PackageProvider'.
+VERBOSE: Importing cmdlet 'Get-Package'.
+VERBOSE: Importing cmdlet 'Get-PackageProvider'.
+VERBOSE: Importing cmdlet 'Get-PackageSource'.
+VERBOSE: Importing cmdlet 'Import-PackageProvider'.
+VERBOSE: Importing cmdlet 'Install-Package'.
+VERBOSE: Importing cmdlet 'Install-PackageProvider'.
+VERBOSE: Importing cmdlet 'Register-PackageSource'.
+VERBOSE: Importing cmdlet 'Save-Package'.
+VERBOSE: Importing cmdlet 'Set-PackageSource'.
+VERBOSE: Importing cmdlet 'Uninstall-Package'.
+VERBOSE: Importing cmdlet 'Unregister-PackageSource'.
+ Az Module Az.Accounts Version: 2.7.4
+Checking Az Context
+ Context AccountId: 'unisol14@outlook.com'
+ Context AccountType: 'User'
+ Context test passed: Context OK
++Processing new bearer token request (ManagementAPI)
+VERBOSE: JWT Token:
+VERBOSE: @{aud=https://management.core.windows.net/; iss=https://sts.windows.net/1561a00a-6d2f-4867-af27-c6bd5d016f7d/; iat=1646917005; nbf=1646917005; exp=1646921363; acr=1; aio=AUQAu/8TAAAANWCHQz139XbDhHddQTWwXpilZ1y2jWF+QAPMNek+cUVy5o93/NLHLNVwk44yVSQMdjBvv+nMX6TEschibhp6iw==; altsecid=1:live.com:0003BFFDD02829D5; amr=System.Object[]; appid=1950a258-227b-4e31-a9cf-717495945fc2; appidacr=0; email=unisol14@outlook.com; family_name=Parsard; given_name=Preston; groups=System.Object[]; idp=live.com; ipaddr=96.83.99.70; name=Preston K. Parsard [UNSL]; oid=549f367b-a4c1-49e9-8949-588e72b32fe2; puid=10032000E1E23E97; rh=0.AW4ACqBhFS9tZ0ivJ8a9XQFvfUZIf3kAutdPukPawfj2MBNuAFM.; scp=user_impersonation; sub=NHF-VAJ8DouCGUSEw2iTOp8LVy4OamHZca2aGEP7YMY; tid=1561a00a-6d2f-4867-af27-c6bd5d016f7d; unique_name=live.com#unisol14@outlook.com; uti=0JthmQcfhUKE_mv_jE7qAA; ver=1.0; wids=System.Object[]; xms_cc=System.Object[]; xms_tcdt=1599731677}
+VERBOSE: JWT Signature:
+VERBOSE: qPADu4kAKsu9wZXLtTZfwJ7Jb6fMDTbPPCNNB5Pnhj91DplLO/6kZVUtDjG4LUoSQCd19GSm/dxF3TozyxYTe9H0D/V3jNV598l7ibjuwEQ3rFWHqw8KbPWsIwRrZYtqTcw66QP4ps3xFBysWbjveZIsiWNdD525favneJ1FoxLBuIA1LosmLswBOQ2Ugkf0g6hoc/Q+M0OKlno0In7qXfvU1v2xyEAE5osvHL61ktGW2pXE6Cs3rwmf9AIu5/MU0RqUtWbEvmSBtVuhrZO26kTuiJj8lpt1d1YCuQql+CLLtaZ1jltlyLE1SjqBYTR8IHjcTOn5sP8ncx3pO+Ydqw==
++Bearer token (ManagementAPI): [tokenRequestProcessed: '03/10/2022 08:50:21']; [expiryDateTime: '03/10/2022 09:09:23']; [timeUntilExpiry: '00:19:01.2769581']
++Processing new bearer token request (MSGraphAPI)
+VERBOSE: JWT Token:
+VERBOSE: @{aud=https://graph.microsoft.com; iss=https://sts.windows.net/1561a00a-6d2f-4867-af27-c6bd5d016f7d/; iat=1646917021; nbf=1646917021; exp=1646921281; acct=1; acr=1; aio=AWQAm/8TAAAA06l9OhMdCFpzENncMB67yDwme8r+RDLxSUFAEvFIesBQtqSotCt95Qoj32CPcr9ddEO2x1Y/flLZfQeIcqdtJM4AC7DZRNLH0/GOwCu+5pR1GUruybItIoNe69gRzMQK; altsecid=1:live.com:0003BFFDD02829D5; amr=System.Object[]; app_displayname=Microsoft Azure PowerShell; appid=1950a258-227b-4e31-a9cf-717495945fc2; appidacr=0; email=unisol14@outlook.com; family_name=Parsard; given_name=Preston; idp=live.com; idtyp=user; ipaddr=96.83.99.70; name=Preston K. Parsard [UNSL]; oid=549f367b-a4c1-49e9-8949-588e72b32fe2; platf=3; puid=10032000E1E23E97; rh=0.AW4ACqBhFS9tZ0ivJ8a9XQFvfQMAAAAAAAAAwAAAAAAAAABuAFM.; scp=AuditLog.Read.All Directory.AccessAsUser.All email openid profile; sub=PAlLC9z780trAeGTNtdsSUv409Kt6GhDTYijwpeXguU; tenant_region_scope=NA; tid=1561a00a-6d2f-4867-af27-c6bd5d016f7d; unique_name=live.com#unisol14@outlook.com; uti=MgRzvmPJaEmcnAB5j5MzAA; ver=1.0; wids=System.Object[]; xms_cc=System.Object[]; xms_st=; xms_tcdt=1599731677}
+VERBOSE: JWT Signature:
+VERBOSE: U4Er/d8vTIUui87Ry7Qf413vnJJifFYlXX+61BDhidsRXtB+ecZCax67eGOWRla6E69F9UNygEUr+VD5OVcMpstxiJgG5YwFDaRuUn0sB50cQLaA3oQ949hGYwjfewQoiexW/jcbIKWd+Gxqo3FLPhCP/bOgPMYFXKIjvAIRWz3plxnS79pgQC+zBFZdhQIPXtiwJrNMwaCho712thLcsJZUEJ04X/chAdRDNVAxS2K3pgJcheNr6+cLB0Z7J1T5ucnYne3WfYqZ+gJZPHXw7kordNLwWdggcrWhk8iwz6RnI0UWpZnu7Me7tmGu8C0qr/dR5K6daE3XGh6+HRBUzw==
++Bearer token (MSGraphAPI): [tokenRequestProcessed: '03/10/2022 08:50:21']; [expiryDateTime: '03/10/2022 09:08:01']; [timeUntilExpiry: '00:17:39.2076793']
+Checking AAD UserType
+VERBOSE: GET with 0-byte payload
+VERBOSE: received -byte response of content type application/json
+ AAD UserType: Guest
+Checking permissions for ManagementGroup 'alz'
+VERBOSE: GET with 0-byte payload
+VERBOSE: received 526-byte response of content type application/json
+Permission check results
+MG Reader permission check PASSED
+Running AzGovViz for ManagementGroupId: 'alz'
+Entities
+ Getting Entities
+VERBOSE: POST with 0-byte payload
+VERBOSE: received 15896-byte response of content type application/json
+  27 Entities returned
+ Getting Entities duration: 0.2071316 seconds
+ Processing Entities data
+  20 Management Groups returned
+  7 Subscriptions returned
+ Processing Entities data duration: 0.2671643 seconds
+Processing Entities duration: 0.49706 seconds
+Get Tenant details
+VERBOSE: GET with 0-byte payload
+VERBOSE: received 8819-byte response of content type application/json
+ Tenant DisplayName: autocloudarcm365
+Get Default Management Group
+VERBOSE: GET with 0-byte payload
+VERBOSE: received 377-byte response of content type application/json
+ default ManagementGroup Id: Non-Standard-Subscriptions
+ requireAuthorizationForGroupCreation: False
+Run Info:
+ Creating HierarchyMap, TenantSummary, DefinitionInsights and ScopeInsights - use parameter: '-HierarchyMapOnly' to only create the HierarchyMap
+ Management Groups only = False - use parameter -ManagementGroupsOnly to only collect data for Management Groups
+ Subscription Whitelist disabled - use parameter: '-SubscriptionQuotaIdWhitelist' to whitelist QuotaIds
+ Microsoft Defender for Cloud Secure Score enabled - use parameter: '-NoMDfCSecureScore' to disable
+ Scrub Identity information for identityType='User' disabled - use parameter: '-DoNotShowRoleAssignmentsUserData' to scrub information such as displayName and signInName (email) for identityType='User'
+ ARM Limits warning set to 80% (default) - use parameter: '-LimitCriticalPercentage' to set warning level accordingly
+ Policy States enabled - use parameter: '-NoPolicyComplianceStates' to disable Policy States
+ Resource Diagnostics Policy Lifecycle recommendations enabled - use parameter: '-NoResourceDiagnosticsPolicyLifecycle' to disable Resource Diagnostics Policy Lifecycle recommendations
+ AAD Groups resolve members enabled (honors parameter -DoNotShowRoleAssignmentsUserData) - use parameter: '-NoAADGroupsResolveMembers' to disable resolving AAD Group memberships
+ AADGroupMembersLimit = 500
+ AADServicePrincipalExpiryWarningDays: 14
+ Azure Consumption reporting enabled: 1 days (default) (2022-03-09 - 2022-03-09) - use parameter: '-AzureConsumptionPeriod' to define the period (days)
+ Azure Consumption report export to CSV enabled - use parameter: '-NoAzureConsumptionReportExportToCSV' to disable
+ ScopeInsights will be created (-NoScopeInsights = False) Q: Why would you not want to show ScopeInsights? A: In larger tenants ScopeInsights may blow up the html file (up to unusable due to html file size)
+ Single Subscription output will be created (-NoSingleSubscriptionOutput = False)
+ ResourceProvider Detailed for TenantSummary enabled - use parameter: '-NoResourceProvidersDetailed' to disable
+ TenantSummary LargeTenant disabled (-LargeTenant = False) Q: Why would you not want to enable -LargeTenant? A: In larger tenants showing the inheritance on each scope may blow up the html file (up to unusable due to html file size)
+ TenantSummary Policy assignments will include assignment information on scopes where assignment is inherited (PolicyAtScopeOnly = False)
+ TenantSummary Role assignments will include assignment information on scopes where assignment is inherited (RBACAtScopeOnly = False)
+ TenantSummary Policy assignments will also include assignments on ResourceGroups (DoNotIncludeResourceGroupsOnPolicy = False)
+ TenantSummary RBAC Role assignments will also include assignments on ResourceGroups and Resources (DoNotIncludeResourceGroupsAndResourcesOnRBAC = False)
+ CSV Export enabled: enriched 'Role assignments' data, enriched 'Policy assignments' data and 'all resources' (subscriptionId, mgPath, resourceType, id, name, location, tags, createdTime, changedTime) (-NoCsvExport = False)
+ JSON Export enabled: export of ManagementGroup Hierarchy including all MG/Sub Policy/RBAC definitions, Policy/RBAC assignments and some more relevant information to JSON (-NoJsonExport = False)
+ JSON Export will also include Policy assignments on ResourceGroups (JsonExportExcludeResourceGroups = False)
+ JSON Export will also include Role assignments on ResourceGroups (JsonExportExcludeResourceGroups = False)
+ JSON Export will also include Role assignments on Resources (JsonExportExcludeResources = False)
+ ThrottleLimit = 10
+ ChangeTrackingDays = 14
+ NoResources = False
+Getting all Subscriptions
+VERBOSE: GET with 0-byte payload
+VERBOSE: received 3187-byte response of content type application/json
+ 7 Subscriptions returned
+Getting all Subscriptions duration: 0.2280652 seconds
+Current AzContext OK: msdn-azr-dev-sub-01; 5c5db896-e9c2-4568-ae10-ee946769310f; QuotaId: MSDN_2014-09-01
+Getting Microsoft Defender for Cloud Secure Score for Management Groups
+VERBOSE: POST with 1200-byte payload
+VERBOSE: received 76-byte response of content type application/json
+ Getting Microsoft Defender for Cloud Secure Score for Management Groups duration: 0.3725616 seconds
+ No Subscriptions present, skipping Consumption data processing
+ Seems there are no Subscriptions present - skipping CostManagement
+ Action: Setting switch parameter 'DoAzureConsumption' to false
+Getting Consumption data duration: 0.0241442 seconds
+Caching built-in Policy and RBAC Role definitions
+ 328 built-in Role definitions returned
+ 64 built-in PolicySet definitions returned
+ 1115 built-in Policy definitions returned
+Caching built-in definitions duration: 5.1350732 seconds
+Collecting custom data
+ CustomDataCollection ManagementGroups
+  Processing Management Groups L1 (1 Management Groups)
+  1/10 Management Groups processed
+  Processing Management Groups L2 (4 Management Groups)
+  2/10 Management Groups processed
+  3/10 Management Groups processed
+  4/10 Management Groups processed
+  5/10 Management Groups processed
+  Processing Management Groups L3 (5 Management Groups)
+  6/10 Management Groups processed
+  7/10 Management Groups processed
+  8/10 Management Groups processed
+  9/10 Management Groups processed
+  10/10 Management Groups processed
+ CustomDataCollection ManagementGroups processing duration: 0.304637765 minutes (18.2782659 seconds)
+ CustomDataCollection Subscriptions
+ CustomDataCollection Subscriptions will process 0 of 0
+Collecting custom data duration: 0.306974166666667 minutes (18.41845 seconds)
+Collecting custom data for 10 ManagementGroups Avg/Max/Min duration in seconds: Average: 4.8847; Maximum: 5.7833; Minimum: 4.0743
+Collecting custom data for 0 Subscriptions Avg/Max/Min duration in seconds: Average: 0; Maximum: 0; Minimum: 0
+Collecting custom data total duration writing the subResourcesArray: 0 seconds
+Collecting custom data APICalls (Management) total count: 90 (0 retries; 0 nextLinkReset)
+Preparing Arrays
+Preparing Arrays duration: 0.00212886666666667 minutes (0.127732 seconds)
+Resolving AAD Groups (for which a RBAC Role assignment exists)
+ Users known as Guest count: 2 (before Resolving AAD Groups)
+ processing 0 AAD Groups with Role assignments
+ Collected 0 AAD Groups
+Resolving AAD Groups duration: 0.000408126666666667 minutes (0.0244876 seconds)
+ Users known as Guest count: 2 (after Resolving AAD Groups)
+Processing Service Principals - Applications
+VERBOSE: GET with 0-byte payload
+VERBOSE: received -byte response of content type application/json
+Processing Service Principals - Applications duration: 0.00555748 minutes (0.3334488 seconds)
+Processing Service Principals - Managed Identities
+Processing Service Principals - Managed Identities duration: 0.000411188333333333 minutes (0.0246713 seconds)
+Creating TagList array
+ Total Number of ALL unique Tag Names: 0
+ Total Number of Subscription unique Tag Names: 0
+ Total Number of ResourceGroup unique Tag Names: 0
+ Total Number of Resource unique Tag Names: 0
+Creating TagList array duration: 0.000493823333333333 minutes (0.0296294 seconds)
+Checking Resource Types Diagnostics capability (1st party only)
+ No Resources at all
+Checking Resource Types Diagnostics capability duration: 0.000100968333333333 minutes (0.0060581 seconds)
+Create helper hash table
+Create helper hash table duration: 4.4413243 seconds
+Building HTML
+processing Helper Queries
+Exporting CSV 'C:\data-msf\source\repos\git\Azure-MG-Sub-Governance-Reporting-1\pwsh\AzGovViz_v6_minor_20220212_1_20220310_085012_alz.csv'
+Exporting ResourcesAll CSV 'C:\data-msf\source\repos\git\Azure-MG-Sub-Governance-Reporting-1\pwsh\AzGovViz_v6_minor_20220212_1_20220310_085012_alz_ResourcesAll.csv'
+Exporting CSV total duration: 0.00272307833333333 minutes (0.1633847 seconds)
+ Building preQueries
+  0 orphaned Policy assignments found
+ Pre Queries duration: 0.00735833666666667 minutes (0.4415002 seconds)
+Summary data collection
+ Total Management Groups: 11 (depth 3)
+ Total Subscriptions: 0 (0 included; 0 out-of-scope)
+ Total Custom Policy definitions: 103
+ Total Custom PolicySet definitions: 7
+ Total Policy assignments: 0
+ Total Policy assignments ManagementGroups 0
+ Total Policy assignments Subscriptions 0
+ Total Policy assignments ResourceGroups: 0
+ Total Custom Role definitions: 4
+ Total Role assignments: 24
+ Total Role assignments (Tenant): 14
+ Total Role assignments (ManagementGroups): 10
+ Total Role assignments (Subscriptions): 0
+ Total Role assignments (ResourceGroups and Resources): 0
+ Total Blueprint definitions: 0
+ Total Blueprint assignments: 0
+ Total Resources: 0
+ Total Resource Types: 0
+ Summary data collection duration: 0.3621161 seconds
+ Creating new state (HTML-Subscriptions_alz_20220310_085012) (local only))
+ Building HierarchyMap
+  Building HierarchyMap for MG 'alz-decommissioned', 0 Subscriptions
+  Building HierarchyMap for MG 'alz-landingzones-corp', 0 Subscriptions
+  Building HierarchyMap for MG 'alz-landingzones-online', 0 Subscriptions
+  Building HierarchyMap for MG 'alz-landingzones', 0 Subscriptions
+  Building HierarchyMap for MG 'alz-platform-connectivity', 0 Subscriptions
+  Building HierarchyMap for MG 'alz-platform-identity', 0 Subscriptions
+  Building HierarchyMap for MG 'alz-platform-management', 0 Subscriptions
+  Building HierarchyMap for MG 'alz-platform', 0 Subscriptions
+  Building HierarchyMap for MG 'alz-sandbox', 0 Subscriptions
+  Building HierarchyMap for MG 'alz', 0 Subscriptions
+ Building HierarchyMap duration: 0.000913411666666667 minutes (0.0548047 seconds)
+ Building TenantSummary
+  processing (pre) TenantSummary RoleAssignments (all 164)
+   RelatedPolicyAssignmentsAll duration: 0.00137268333333333 minutes (0.082361 seconds)
+   Processing unresoved Identities (createdBy)
+    1 unresolved identities that created a RBAC Role assignment (createdBy)
+    1 unresolved identities that have a value
+    IdentitiesToCheck: "3be3c8fb-f35c-486d-99a6-e449adec0d32"
+VERBOSE: POST with 80-byte payload
+VERBOSE: received -byte response of content type application/json
+    1 identities resolved
+   UnresolvedIdentities (createdBy) duration: 0.00594703333333333 minutes (0.356822 seconds)
+   RBACAll Grouping duration: 0.000341995 minutes (0.0205197 seconds)
+   CreateRBACAll duration: 0.00719254833333333 minutes (0.4315529 seconds)
+  processing TenantSummary Custom Policy definitions
+   Exporting PolicyDefinitions CSV 'C:\data-msf\source\repos\git\Azure-MG-Sub-Governance-Reporting-1\pwsh\AzGovViz_v6_minor_20220212_1_20220310_085012_alz_PolicyDefinitions.csv'
+   Custom Policy processing duration: 0.0952931 minutes (5.717586 seconds)
+  processing TenantSummary Custom Policy definitions orphaned
+   processing TenantSummary Custom Policy definitions orphaned duration: 0.0868319 seconds
+  processing TenantSummary Custom PolicySet definitions
+   Exporting PolicySetDefinitions CSV 'C:\data-msf\source\repos\git\Azure-MG-Sub-Governance-Reporting-1\pwsh\AzGovViz_v6_minor_20220212_1_20220310_085012_alz_PolicySetDefinitions.csv'
+   Custom PolicySet processing duration: 0.0545398333333333 minutes (3.27239 seconds)
+  processing TenantSummary Custom PolicySet definitions orphaned
+  processing TenantSummary Custom PolicySet definitions using deprected Policy
+   processing PolicySetsDeprecatedPolicy duration: 0.0909792 seconds
+  processing TenantSummary PolicyAssignments using deprecated Policy
+   processing PolicyAssignmentsDeprecatedPolicy duration: 0.0028189 seconds
+  processing TenantSummary Policy exemptions
+  processing TenantSummary PolicyAssignments orphaned
+  processing TenantSummary PolicyAssignments (all 0)
+   processing PolicyAssignmentsRoleAssignmentMapping
+   PolicyAssignmentsRoleAssignmentMapping processing duration: 0.00042717 minutes (0.0256302 seconds)
+   processing PolicyAssignmnetsUniqueRelations
+   PolicyAssignmnetsUniqueRelations processing duration: 6.83966666666667E-05 minutes (0.0041038 seconds)
+   processing PolicyAssignmentsAllCreateEnriched
+   PolicyAssignmentsAllCreateEnriched processing duration: 9.55583333333333E-05 minutes (0.0057335 seconds)
+   processing unresoved Identities (createdBy/updatedBy)
+    UnresolvedIdentities (createdBy/updatedBy) duration: 0.000112816666666667 minutes (0.006769 seconds)
+   processing SummaryPolicyAssignmentsAllHTML
+   SummaryPolicyAssignmentsAllHTML duration: 1.69E-05 minutes (0.001014 seconds)
+   SummaryPolicyAssignmentsAll duration: 0.00145594166666667 minutes (0.0873565 seconds)
+  processing TenantSummary Custom Roles
+  processing TenantSummary Custom Roles orphaned
+   SUMMARYOrphanedCustomRoles duration: 0.00025666 minutes (0.0153996 seconds)
+  processing TenantSummary RoleAssignments orphaned
+  processing TenantSummary RoleAssignments
+   Exporting RoleAssignments CSV 'C:\data-msf\source\repos\git\Azure-MG-Sub-Governance-Reporting-1\pwsh\AzGovViz_v6_minor_20220212_1_20220310_085012_alz_RoleAssignments.csv'
+   CreateRBACAll CSV duration: 0.00158743666666667 minutes (0.0952462 seconds)
+   CreateRBACAll HTML before Foreach duration: 0.00207637166666667 minutes (0.1245823 seconds)
+   Sort RBACAll duration: 0.000376123333333333 minutes (0.0225674 seconds)
+   CreateRBACAll HTML Foreach duration: 0.00181493666666667 minutes (0.1088962 seconds)
+   SummaryRoleAssignmentsAll duration: 0.00482726 minutes (0.2896356 seconds)
+  processing TenantSummary Custom Roles security (owner permissions)
+  processing TenantSummary Roles security (can apply Role assignments)
+  processing TenantSummary RoleAssignments security (owner SP)
+   TenantSummary RoleAssignments security (owner SP) duration: 0.001564135 minutes (0.0938481 seconds)
+  processing TenantSummary RoleAssignments security (owner notGroup)
+   TenantSummary RoleAssignments security (owner notGroup) duration: 0.001172825 minutes (0.0703695 seconds)
+  processing TenantSummary RoleAssignments security (userAccessAdministrator notGroup)
+   TenantSummary RoleAssignments security (userAccessAdministrator notGroup) duration: 0.000559828333333333 minutes (0.0335897 seconds)
+  processing TenantSummary RoleAssignments security (high priviledged Guest User)
+   TenantSummary RoleAssignments security (high priviledged Guest User) duration: 0.000292258333333333 minutes (0.0175355 seconds)
+  processing TenantSummary Blueprints
+  processing TenantSummary BlueprintAssignments
+  processing TenantSummary Blueprint definitions orphaned
+  processing TenantSummary ManagementGroups
+   SUMMARYMGs duration: 0.000372518333333333 minutes (0.0223511 seconds)
+  processing TenantSummary ManagementGroups - default Management Group
+  processing TenantSummary ManagementGroups - requireAuthorizationForGroupCreation Management Group
+  processing TenantSummary Subscriptions
+  processing TenantSummary Subscriptions (out-of-scope)
+  processing TenantSummary TagsUsage
+  processing TenantSummary Subscriptions Resources
+   SUMMARY Resources processing duration: 8.677E-05 minutes (0.0052062 seconds)
+  processing TenantSummary Subscriptions Resources by Location
+   SUMMARY Resources ByLocation processing duration: 8.92333333333333E-05 minutes (0.005354 seconds)
+  processing TenantSummary Subscriptions Resource Providers
+   TenantSummary Subscriptions Resource Providers duration: 0.000104381666666667 minutes (0.0062629 seconds)
+  processing TenantSummary Subscriptions Resource Providers detailed
+   RP detailed processing duration: 1.68566666666667E-05 minutes (0.0010114 seconds)
+  processing TenantSummary Subscriptions Resource Locks
+   ResourceLocks processing duration: 3.41166666666667E-05 minutes (0.002047 seconds)
+  processing TenantSummary Subscriptions Microsoft Defender for Cloud plans by plan
+   Microsoft Defender for Cloud plans by plan processing duration: 3.57216666666667E-05 minutes (0.0021433 seconds)
+  processing TenantSummary Subscriptions Microsoft Defender for Cloud plans by Subscription
+   Microsoft Defender for Cloud plans by Subscription processing duration: 1.71866666666667E-05 minutes (0.0010312 seconds)
+  processing TenantSummary Subscriptions UserAssigned Managed Identities assigned to Resources
+   UserAssigned Managed Identities assigned to Resources processing duration: 2.22733333333333E-05 minutes (0.0013364 seconds)
+  processing TenantSummary Diagnostics Management Groups
+  processing TenantSummary Diagnostics Subscriptions
+  processing TenantSummary Diagnostics Resources Diagnostics Capable (1st party only)
+  processing TenantSummary Diagnostics Resource Diagnostics Policy Lifecycle
+   Resource Diagnostics Policy Lifecycle processing duration: 1.8110706 seconds
+  processing TenantSummary ManagementGroups Limit PolicyAssignments
+  processing TenantSummary ManagementGroups Limit PolicyScope
+  processing TenantSummary ManagementGroups Limit PolicySetScope
+  processing TenantSummary ManagementGroups Limit RoleAssignments
+  processing TenantSummary Subscriptions Limit Resource Groups
+  processing TenantSummary Subscriptions Limit Subscription Tags
+  processing TenantSummary Subscriptions Limit PolicyAssignments
+  processing TenantSummary Subscriptions Limit PolicyScope
+  processing TenantSummary Subscriptions Limit PolicySetScope
+  processing TenantSummary Subscriptions Limit RoleAssignments
+  processing TenantSummary AAD ServicePrincipals - not found
+  processing TenantSummary AAD Applications - not found
+  processing TenantSummary AAD SP Managed Identities
+   TenantSummary AAD SP Managed Identities processing duration: 0.000205038333333333 minutes (0.0123023 seconds)
+  processing TenantSummary AAD SP Apps CredExpiry
+   TenantSummary AAD SP Apps CredExpiry processing duration: 0.000686058333333333 minutes (0.0411635 seconds)
+  processing TenantSummary AAD External ServicePrincipals
+   TenantSummary AAD External ServicePrincipals processing duration: 0.000282881666666667 minutes (0.0169729 seconds)
+  processing TenantSummary ChangeTracking
+   processing Policy
+   processing PolicySet
+   processing Policy assignment
+   processing RBAC
+   processing RBAC Role definition created
+   processing RBAC Role definition updated
+   processing RBAC Role assignments
+   processing Resources
+   ChangeTracking duration: 0.00453312833333333 minutes (0.2719877 seconds)
+  processing TenantSummary Findings
+   SUMMARYMGs duration: 0.00031622 minutes (0.0189732 seconds)
+ Building TenantSummary duration: 0.223032093333333 minutes (13.3819256 seconds)
+ Building DefinitionInsights
+  processing DefinitionInsightsPolicyDefinitions
+   1000 Policy definitions processed
+   DefinitionInsightsPolicyDefinitions duration: 0.06758394 minutes (4.0550364 seconds)
+  processing DefinitionInsightsPolicySetDefinitions
+   DefinitionInsightsPolicySetDefinitions duration: 0.130607463333333 minutes (7.8364478 seconds)
+  processing DefinitionInsightsRoleDefinitions
+   Exporting RoleDefinitions CSV 'C:\data-msf\source\repos\git\Azure-MG-Sub-Governance-Reporting-1\pwsh\AzGovViz_v6_minor_20220212_1_20220310_085012_alz_RoleDefinitions.csv'
+   DefinitionInsightsRoleDefinitions duration: 0.133872005 minutes (8.0323203 seconds)
+  DefinitionInsights processing duration: 0.468656315 minutes (28.1193789 seconds)
+ Building ScopeInsights
+  Building ScopeInsights MG 'alz', 0 Subscriptions
+  Building ScopeInsights MG 'alz-decommissioned', 0 Subscriptions
+  Building ScopeInsights MG 'alz-landingzones', 0 Subscriptions
+  Building ScopeInsights MG 'alz-landingzones-corp', 0 Subscriptions
+  Building ScopeInsights MG 'alz-landingzones-online', 0 Subscriptions
+  Building ScopeInsights MG 'alz-platform', 0 Subscriptions
+  Building ScopeInsights MG 'alz-platform-connectivity', 0 Subscriptions
+  Building ScopeInsights MG 'alz-platform-identity', 0 Subscriptions
+  Building ScopeInsights MG 'alz-platform-management', 0 Subscriptions
+  Building ScopeInsights MG 'alz-sandbox', 0 Subscriptions
+ Building ScopeInsights duration: 0.00796639666666667 minutes (0.4779838 seconds)
+Building HTML total duration: 0.967456086666667 minutes (58.0473652 seconds)
+Building Markdown
+Building Markdown total duration: 0.00339682833333333 minutes (0.2038097 seconds)
+Exporting DailySummary CSV 'C:\data-msf\source\repos\git\Azure-MG-Sub-Governance-Reporting-1\pwsh\AzGovViz_v6_minor_20220212_1_20220310_085012_alz_DailySummary.csv'
+Create Hierarchy JSON
+ Create ht for JSON
+ Creating new state (JSON_alz_20220310_085012) (local only))
+ ht for JSON creation duration: 13.5662204 seconds
+ Build JSON
+ Building JSON duration: 2.5897728 seconds
+Creating Hierarchy JSON duration: 16.1698801 seconds
+AzGovViz APICalls total count: 117 (111 ManagementAPI; 6 MSGraphAPI; 2 retries; 0 nextLinkReset)
+AzGovViz duration: 1.94108023833333 minutes
+End AzGovViz 10-Mar-2022 08:52:09
+Checking for errors
+Error count is 0
+VERBOSE: POST with 2016-byte payload
+VERBOSE: received 49-byte response of content type application/json
+**********************
+PowerShell transcript end
+End time: 20220310085209
+**********************

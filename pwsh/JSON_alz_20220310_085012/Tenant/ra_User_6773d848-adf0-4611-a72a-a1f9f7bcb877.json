@@ -1,0 +1,10 @@
+{
+  "RoleAssignmentId": "/providers/microsoft.authorization/roleassignments/6773d848-adf0-4611-a72a-a1f9f7bcb877",
+  "Scope": "/",
+  "DisplayName": "Preston K. Parsard [UNSL]",
+  "SignInName": "unisol14_outlook.com#EXT#@autocloudarcm365.onmicrosoft.com",
+  "RoleDefinitionName": "User Access Administrator",
+  "RoleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+  "ObjectId": "549f367b-a4c1-49e9-8949-588e72b32fe2",
+  "ObjectType": "User"
+}

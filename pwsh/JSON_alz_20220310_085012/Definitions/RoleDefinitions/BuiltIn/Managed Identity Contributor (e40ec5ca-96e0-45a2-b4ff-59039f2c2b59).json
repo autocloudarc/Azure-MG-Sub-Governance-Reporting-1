@@ -1,0 +1,29 @@
+{
+  "roleName": "Managed Identity Contributor",
+  "type": "BuiltInRole",
+  "description": "Create, Read, Update, and Delete User Assigned Identity",
+  "assignableScopes": [
+    "/"
+  ],
+  "permissions": [
+    {
+      "actions": [
+        "Microsoft.ManagedIdentity/userAssignedIdentities/read",
+        "Microsoft.ManagedIdentity/userAssignedIdentities/write",
+        "Microsoft.ManagedIdentity/userAssignedIdentities/delete",
+        "Microsoft.Authorization/*/read",
+        "Microsoft.Insights/alertRules/*",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Resources/deployments/*",
+        "Microsoft.Support/*"
+      ],
+      "notActions": [],
+      "dataActions": [],
+      "notDataActions": []
+    }
+  ],
+  "createdOn": "2017-12-14T19:53:42.8804692Z",
+  "updatedOn": "2021-11-11T20:13:39.3023761Z",
+  "createdBy": null,
+  "updatedBy": null
+}

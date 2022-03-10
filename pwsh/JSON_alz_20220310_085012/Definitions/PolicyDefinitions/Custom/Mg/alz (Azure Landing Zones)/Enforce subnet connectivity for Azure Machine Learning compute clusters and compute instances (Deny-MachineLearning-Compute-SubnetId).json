@@ -1,0 +1,61 @@
+{
+  "displayName": "Enforce subnet connectivity for Azure Machine Learning compute clusters and compute instances",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "Enforce subnet connectivity for Azure Machine Learning compute clusters and compute instances.",
+  "metadata": {
+    "version": "1.0.0",
+    "category": "Machine Learning",
+    "createdBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "createdOn": "2022-03-10T10:49:57.7948066Z",
+    "updatedBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "updatedOn": "2022-03-10T12:43:03.3337753Z"
+  },
+  "parameters": {
+    "effect": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Disabled",
+        "Deny"
+      ],
+      "defaultValue": "Deny"
+    }
+  },
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.MachineLearningServices/workspaces/computes"
+        },
+        {
+          "field": "Microsoft.MachineLearningServices/workspaces/computes/computeType",
+          "in": [
+            "AmlCompute",
+            "ComputeInstance"
+          ]
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.MachineLearningServices/workspaces/computes/subnet.id",
+              "exists": false
+            },
+            {
+              "value": "[empty(field('Microsoft.MachineLearningServices/workspaces/computes/subnet.id'))]",
+              "equals": true
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "[parameters('effect')]"
+    }
+  }
+}

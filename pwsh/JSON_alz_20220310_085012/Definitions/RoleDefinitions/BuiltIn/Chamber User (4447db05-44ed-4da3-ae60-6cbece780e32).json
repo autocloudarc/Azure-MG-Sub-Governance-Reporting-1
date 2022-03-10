@@ -1,0 +1,28 @@
+{
+  "roleName": "Chamber User",
+  "type": "BuiltInRole",
+  "description": "Lets you view everything under your HPC Workbench chamber, but not make any changes.",
+  "assignableScopes": [
+    "/"
+  ],
+  "permissions": [
+    {
+      "actions": [
+        "Microsoft.HpcWorkbench/instances/chambers/*/read",
+        "Microsoft.HpcWorkbench/instances/chambers/workloads/*",
+        "Microsoft.HpcWorkbench/instances/chambers/getUploadUri/action",
+        "Microsoft.HpcWorkbench/instances/consortiums/*/read",
+        "Microsoft.Authorization/*/read",
+        "Microsoft.Resources/deployments/*",
+        "Microsoft.Resources/subscriptions/resourceGroups/read"
+      ],
+      "notActions": [],
+      "dataActions": [],
+      "notDataActions": []
+    }
+  ],
+  "createdOn": "2021-12-15T20:51:06.2119764Z",
+  "updatedOn": "2022-01-27T04:54:22.9559555Z",
+  "createdBy": null,
+  "updatedBy": null
+}

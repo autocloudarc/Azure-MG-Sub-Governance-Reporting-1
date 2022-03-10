@@ -1,0 +1,24 @@
+{
+  "roleName": "Windows Admin Center Administrator Login",
+  "type": "BuiltInRole",
+  "description": "Let's you manage the OS of your resource via Windows Admin Center as an administrator.",
+  "assignableScopes": [
+    "/"
+  ],
+  "permissions": [
+    {
+      "actions": [
+        "Microsoft.HybridCompute/machines/*/read"
+      ],
+      "notActions": [],
+      "dataActions": [
+        "Microsoft.HybridCompute/machines/WACLoginAsAdmin/action"
+      ],
+      "notDataActions": []
+    }
+  ],
+  "createdOn": "2022-01-12T00:51:19.5581155Z",
+  "updatedOn": "2022-02-04T20:37:29.0437685Z",
+  "createdBy": null,
+  "updatedBy": null
+}

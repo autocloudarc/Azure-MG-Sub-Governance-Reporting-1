@@ -1,0 +1,10 @@
+{
+  "RoleAssignmentId": "/providers/microsoft.authorization/roleassignments/78c99b5c-f9ff-47e7-8b19-261a31981dc1",
+  "Scope": "/",
+  "DisplayName": null,
+  "SignInName": null,
+  "RoleDefinitionName": "Contributor",
+  "RoleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+  "ObjectId": "05fc20b8-3126-42c7-82d5-beeabe6283ca",
+  "ObjectType": "Unknown"
+}

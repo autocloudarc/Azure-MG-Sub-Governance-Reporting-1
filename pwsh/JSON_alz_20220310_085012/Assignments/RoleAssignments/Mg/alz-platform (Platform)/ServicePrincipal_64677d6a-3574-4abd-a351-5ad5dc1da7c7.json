@@ -1,0 +1,10 @@
+{
+  "RoleAssignmentId": "/providers/microsoft.management/managementgroups/alz-platform/providers/microsoft.authorization/roleassignments/64677d6a-3574-4abd-a351-5ad5dc1da7c7",
+  "Scope": "/providers/Microsoft.Management/managementGroups/alz-platform",
+  "DisplayName": "spn-alz-accelerator-11",
+  "SignInName": null,
+  "RoleDefinitionName": "Owner",
+  "RoleDefinitionId": "8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+  "ObjectId": "07390265-aba8-4f54-8a36-db57e2c11574",
+  "ObjectType": "ServicePrincipal"
+}

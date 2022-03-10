@@ -1,0 +1,67 @@
+{
+  "displayName": "Azure Cache for Redis only secure connections should be enabled",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "Audit enabling of only connections via SSL to Azure Cache for Redis. Validate both minimum TLS version and enableNonSslPort is disabled. Use of secure connections ensures authentication between the server and the service and protects data in transit from network layer attacks such as man-in-the-middle, eavesdropping, and session-hijacking",
+  "metadata": {
+    "version": "1.0.0",
+    "category": "Cache",
+    "createdBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "createdOn": "2022-03-10T10:49:56.9767148Z",
+    "updatedBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "updatedOn": "2022-03-10T12:43:03.3222497Z"
+  },
+  "parameters": {
+    "effect": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "The effect determines what happens when the policy rule is evaluated to match"
+      },
+      "allowedValues": [
+        "Audit",
+        "Deny",
+        "Disabled"
+      ],
+      "defaultValue": "Deny"
+    },
+    "minimumTlsVersion": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Select minumum TLS version for Azure Cache for Redis.",
+        "description": "Select minimum TLS version for Azure Cache for Redis."
+      },
+      "allowedValues": [
+        "1.2",
+        "1.1",
+        "1.0"
+      ],
+      "defaultValue": "1.2"
+    }
+  },
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Cache/redis"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.Cache/Redis/enableNonSslPort",
+              "equals": "true"
+            },
+            {
+              "field": "Microsoft.Cache/Redis/minimumTlsVersion",
+              "notequals": "[parameters('minimumTlsVersion')]"
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "[parameters('effect')]"
+    }
+  }
+}

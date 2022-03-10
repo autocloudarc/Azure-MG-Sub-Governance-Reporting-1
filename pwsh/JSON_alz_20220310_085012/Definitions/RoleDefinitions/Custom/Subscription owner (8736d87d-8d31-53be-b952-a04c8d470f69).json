@@ -1,0 +1,26 @@
+{
+  "roleName": "Subscription owner",
+  "type": "CustomRole",
+  "description": "Delegated role for subscription owner derived from subscription Owner role",
+  "assignableScopes": [
+    "/providers/Microsoft.Management/managementGroups/alz"
+  ],
+  "permissions": [
+    {
+      "actions": [
+        "*"
+      ],
+      "notActions": [
+        "Microsoft.Authorization/*/write",
+        "Microsoft.Network/vpnGateways/*",
+        "Microsoft.Network/expressRouteCircuits/*",
+        "Microsoft.Network/routeTables/write",
+        "Microsoft.Network/vpnSites/*"
+      ]
+    }
+  ],
+  "createdOn": "2022-03-10T10:50:42.0112014Z",
+  "updatedOn": "2022-03-10T12:43:46.2869501Z",
+  "createdBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+  "updatedBy": "07390265-aba8-4f54-8a36-db57e2c11574"
+}

@@ -1,0 +1,46 @@
+{
+  "displayName": "Deny public IPs for Databricks cluster",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "Denies the deployment of workspaces that do not use the noPublicIp feature to host Databricks clusters without public IPs.",
+  "metadata": {
+    "version": "1.0.0",
+    "category": "Databricks",
+    "createdBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "createdOn": "2022-03-10T10:49:56.9811929Z",
+    "updatedBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "updatedOn": "2022-03-10T12:43:03.6696995Z"
+  },
+  "parameters": {
+    "effect": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Disabled",
+        "Deny"
+      ],
+      "defaultValue": "Deny"
+    }
+  },
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Databricks/workspaces"
+        },
+        {
+          "field": "Microsoft.DataBricks/workspaces/parameters.enableNoPublicIp.value",
+          "notEquals": true
+        }
+      ]
+    },
+    "then": {
+      "effect": "[parameters('effect')]"
+    }
+  }
+}

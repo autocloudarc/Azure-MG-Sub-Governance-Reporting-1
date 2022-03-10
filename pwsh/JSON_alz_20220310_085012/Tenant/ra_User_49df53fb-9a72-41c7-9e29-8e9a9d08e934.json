@@ -1,0 +1,10 @@
+{
+  "RoleAssignmentId": "/providers/microsoft.authorization/roleassignments/49df53fb-9a72-41c7-9e29-8e9a9d08e934",
+  "Scope": "/",
+  "DisplayName": "Preston Parsard [MSFT]",
+  "SignInName": "prestopa_microsoft.com#EXT#@autocloudarcm365.onmicrosoft.com",
+  "RoleDefinitionName": "Reader",
+  "RoleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+  "ObjectId": "6384d11f-f8fa-4b62-b475-943fc13cbf8a",
+  "ObjectType": "User"
+}

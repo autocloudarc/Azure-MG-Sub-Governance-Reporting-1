@@ -1,0 +1,10 @@
+{
+  "RoleAssignmentId": "/providers/microsoft.authorization/roleassignments/454e6795-7d2b-46a2-b84b-dc87e64c47d7",
+  "Scope": "/",
+  "DisplayName": "Preston Parsard [AUTO]",
+  "SignInName": "autocloudarc@autocloudarcm365.onmicrosoft.com",
+  "RoleDefinitionName": "Owner",
+  "RoleDefinitionId": "8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+  "ObjectId": "289bfa7f-6c28-4240-aa52-dd105c74642d",
+  "ObjectType": "User"
+}

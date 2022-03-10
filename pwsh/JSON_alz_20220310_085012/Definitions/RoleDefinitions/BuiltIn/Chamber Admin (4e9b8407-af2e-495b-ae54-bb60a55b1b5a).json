@@ -1,0 +1,27 @@
+{
+  "roleName": "Chamber Admin",
+  "type": "BuiltInRole",
+  "description": "Lets you manage everything under your HPC Workbench chamber.",
+  "assignableScopes": [
+    "/"
+  ],
+  "permissions": [
+    {
+      "actions": [
+        "Microsoft.HpcWorkbench/*/read",
+        "Microsoft.HpcWorkbench/instances/chambers/*",
+        "Microsoft.HpcWorkbench/instances/consortiums/*/read",
+        "Microsoft.Authorization/*/read",
+        "Microsoft.Resources/deployments/*",
+        "Microsoft.Resources/subscriptions/resourceGroups/read"
+      ],
+      "notActions": [],
+      "dataActions": [],
+      "notDataActions": []
+    }
+  ],
+  "createdOn": "2021-12-15T20:53:14.4428297Z",
+  "updatedOn": "2022-01-20T05:04:48.3694Z",
+  "createdBy": null,
+  "updatedBy": null
+}

@@ -1,0 +1,46 @@
+{
+  "displayName": "Deny vNet peering cross subscription.",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "This policy denies the creation of vNet Peerings outside of the same subscriptions under the assigned scope.",
+  "metadata": {
+    "version": "1.0.1",
+    "category": "Network",
+    "createdBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "createdOn": "2022-03-10T10:49:57.9378155Z",
+    "updatedBy": "07390265-aba8-4f54-8a36-db57e2c11574",
+    "updatedOn": "2022-03-10T12:43:03.5583901Z"
+  },
+  "parameters": {
+    "effect": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "Audit",
+        "Deny",
+        "Disabled"
+      ],
+      "defaultValue": "Deny"
+    }
+  },
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+        },
+        {
+          "field": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings/remoteVirtualNetwork.id",
+          "notcontains": "[subscription().id]"
+        }
+      ]
+    },
+    "then": {
+      "effect": "[parameters('effect')]"
+    }
+  }
+}

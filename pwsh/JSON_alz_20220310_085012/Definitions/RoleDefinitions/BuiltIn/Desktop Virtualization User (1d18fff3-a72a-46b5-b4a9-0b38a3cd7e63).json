@@ -1,0 +1,22 @@
+{
+  "roleName": "Desktop Virtualization User",
+  "type": "BuiltInRole",
+  "description": "Allows user to use the applications in an application group.",
+  "assignableScopes": [
+    "/"
+  ],
+  "permissions": [
+    {
+      "actions": [],
+      "notActions": [],
+      "dataActions": [
+        "Microsoft.DesktopVirtualization/applicationGroups/useApplications/action"
+      ],
+      "notDataActions": []
+    }
+  ],
+  "createdOn": "2019-08-07T00:29:03.8727621Z",
+  "updatedOn": "2021-11-11T20:14:05.9821791Z",
+  "createdBy": null,
+  "updatedBy": null
+}
